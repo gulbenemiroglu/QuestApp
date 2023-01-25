@@ -3,3 +3,8 @@
     box-shadow: none;
     color: white;
 }
+
+.dflex-align-items-center{
+    display: flex;
+    align-items: center;
+}

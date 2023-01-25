@@ -42,15 +42,15 @@ function Home() {
             <React.Fragment>
                     <CssBaseline />
                     <Container fixed className="homeContainer">
+                        {localStorage.getItem("currentUser") == null ? "" :
                         <PostForm
-                            userId={1}
-                            userName={"post.userName"}
-                            title={"post.title"}
-                            text={"post.text"}
+                            userId={localStorage.getItem("currentUser")}
+                            userName={localStorage.getItem("userName")}
                             refreshPost = {refreshPost}    
-                        >
-                        
+                        >                        
                         </PostForm>
+                        }
+                        
                        
                         {postList.map(post => (
                         <Post
